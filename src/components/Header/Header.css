@@ -1,0 +1,33 @@
+.wrapper__header {
+  background: #262c7c;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper__header img {
+  width: 100%;
+}
+
+.header__title h1 {
+  font-size: 24px;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding-left: 15px;
+}
+
+.header-text__sub-title {
+  font-size: 32px;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.header-text__description {
+  font-size: 16px;
+  color: #bec1e0;
+  width: 450px;
+}
+
+.wrapper__header-text {
+  padding: 200px 0px;
+}
