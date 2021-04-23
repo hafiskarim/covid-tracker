@@ -12,6 +12,7 @@ const caseReducer = (state = initialState, action) => {
         ...state,
         caseData: action.payload.data,
       };
+
     default:
       return state;
   }

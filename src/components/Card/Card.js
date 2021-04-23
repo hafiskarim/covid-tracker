@@ -9,9 +9,9 @@ import { connect } from "react-redux";
 import { getWorldWideCase } from "../../actions/caseAction";
 
 class Card extends Component {
-  //   componentDidMount() {
-  //     this.props.onGetWorldWideCase();
-  //   }
+  componentDidMount() {
+    this.props.onGetWorldWideCase();
+  }
 
   render() {
     const worldWideCase = this.props.case.caseData.Global;

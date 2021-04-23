@@ -39,3 +39,21 @@
 .tab-content {
   margin-left: 40px;
 }
+
+.tabsCountry__status {
+  font-size: 14px;
+  color: #6468a1;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.tabsCountry__total {
+  font-size: 24px;
+  font-weight: 500;
+  color: #262c7c;
+  margin: 0;
+}
+
+.wrapper__tabsCountry {
+  margin-left: 10px;
+}
