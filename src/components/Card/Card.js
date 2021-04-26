@@ -10,7 +10,7 @@ import { getWorldWideCase } from "../../actions/caseAction";
 
 class Card extends Component {
   componentDidMount() {
-    this.props.onGetWorldWideCase();
+    this.props.getWorldWideCase();
   }
 
   render() {
@@ -93,10 +93,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onGetWorldWideCase: () => dispatch(getWorldWideCase()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Card);
+export default connect(mapStateToProps, { getWorldWideCase })(Card);
