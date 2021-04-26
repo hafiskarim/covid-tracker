@@ -14,7 +14,7 @@ class Card extends Component {
   }
 
   render() {
-    const worldWideCase = this.props.case.caseData.Global;
+    const worldWideCase = this.props.case.caseData[0];
     const numberFormat = (num) => {
       var num_parts = num.toString().split(".");
       num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -46,7 +46,7 @@ class Card extends Component {
                   </p>
                   <p className="card-text__total-cases">
                     {worldWideCase
-                      ? numberFormat(worldWideCase.TotalConfirmed)
+                      ? numberFormat(worldWideCase.confirmed)
                       : null}
                   </p>
                 </div>
@@ -61,7 +61,7 @@ class Card extends Component {
                   <p className="card-text__status-cases">Total Recovered</p>
                   <p className="card-text__total-cases">
                     {worldWideCase
-                      ? numberFormat(worldWideCase.TotalRecovered)
+                      ? numberFormat(worldWideCase.critical)
                       : null}
                   </p>
                 </div>
@@ -75,9 +75,7 @@ class Card extends Component {
                 <div className="wrapper__card-text">
                   <p className="card-text__status-cases">Total Deaths</p>
                   <p className="card-text__total-cases">
-                    {worldWideCase
-                      ? numberFormat(worldWideCase.TotalDeaths)
-                      : null}
+                    {worldWideCase ? numberFormat(worldWideCase.deaths) : null}
                   </p>
                 </div>
               </div>
