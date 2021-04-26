@@ -25,6 +25,7 @@ export const getWorldWideCase = () => (dispatch) => {
       type: actionTypes.GET_CASES_WORLDWIDE_SUCCESS,
       payload: response,
     });
+    console.log(response);
   });
   // .catch((error) => {
   //   dispatch(getWorldWideCaseError(error));
@@ -37,10 +38,13 @@ export const getWorldWideCaseError = (error) => ({
 });
 
 export const getListByCountry = () => (dispatch) => {
-  Axios.request(apiGetListByCountry).then((response) => {
-    dispatch({
-      type: actionTypes.GET_LIST_BY_COUNTRY_SUCCESS,
-      payload: response,
+  setTimeout(() => {
+    Axios.request(apiGetListByCountry).then((response) => {
+      dispatch({
+        type: actionTypes.GET_LIST_BY_COUNTRY_SUCCESS,
+        payload: response,
+      });
+      console.log(response);
     });
-  });
+  }, 3000);
 };

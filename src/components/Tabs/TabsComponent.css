@@ -10,6 +10,9 @@
 
 .nav-tabs {
   border-bottom: unset !important;
+  overflow-y: scroll;
+  height: 500px;
+  flex-wrap: unset !important;
 }
 
 .nav-tabs .nav-item.show .nav-link,
@@ -29,6 +32,7 @@
   background: #f2f3f7;
   border-radius: 5px;
   margin-bottom: 15px !important;
+  margin-right: 15px !important;
   width: 200px;
   text-align: center;
   font-size: 14px;
