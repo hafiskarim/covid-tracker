@@ -17,7 +17,10 @@ class TabsComponent extends Component {
     console.log(dataListByCountry);
     return (
       <div className="container wrapper__tabs-component">
-        <Tabs defaultActiveKey="indonesia" id="controlled-tab-example">
+        <Tabs
+          defaultActiveKey={dataListByCountry[0]}
+          id="controlled-tab-example"
+        >
           {/* <Tab eventKey="indonesia" title="Indonesia">
             <TabsIndonesia />
           </Tab>
@@ -28,7 +31,9 @@ class TabsComponent extends Component {
             <TabsEngland />
           </Tab> */}
           {dataListByCountry.map((item) => (
-            <Tab title={item.name} />
+            <Tab eventKey={item.alpha2code} title={item.name}>
+              {item.alpha2code}
+            </Tab>
           ))}
         </Tabs>
       </div>
