@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   GoogleMap,
   Marker,
@@ -44,7 +44,7 @@ function TabsInside(props) {
       <div style={{ width: "800px", height: "100%" }}>
         <MapComponent isMarkerShown latVal={latVal} longVal={longVal} />
       </div>
-      {/* <div className="d-flex justify-content-between mt-3">
+      <div className="d-flex justify-content-between mt-3">
         <div className="d-flex align-items-center flex-wrap">
           <div>
             <img src={positifIcon} alt="positifIcon" />
@@ -52,9 +52,7 @@ function TabsInside(props) {
           <div className="wrapper__tabsCountry">
             <p className="tabsCountry__status">Total Confirmed</p>
             <p className="tabsCountry__total">
-              {totalCasesByCountry
-                ? numberFormat(totalCasesByCountry[77].TotalConfirmed)
-                : null}
+              {props.dataByCountry ? props.dataByCountry.confirmed : null}
             </p>
           </div>
         </div>
@@ -65,9 +63,7 @@ function TabsInside(props) {
           <div className="wrapper__tabsCountry">
             <p className="tabsCountry__status">Total Recovered</p>
             <p className="tabsCountry__total">
-              {totalCasesByCountry
-                ? numberFormat(totalCasesByCountry[77].TotalRecovered)
-                : null}
+              {props.dataByCountry ? props.dataByCountry.critical : null}
             </p>
           </div>
         </div>
@@ -78,13 +74,11 @@ function TabsInside(props) {
           <div className="wrapper__tabsCountry">
             <p className="tabsCountry__status">Total Deaths</p>
             <p className="tabsCountry__total">
-              {totalCasesByCountry
-                ? numberFormat(totalCasesByCountry[77].TotalDeaths)
-                : null}
+              {props.dataByCountry ? props.dataByCountry.deaths : null}
             </p>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
