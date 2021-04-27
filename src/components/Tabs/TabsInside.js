@@ -32,8 +32,6 @@ const MapComponent = compose(
 ));
 
 function TabsInside(props) {
-  // console.log("Longitude" + props.longitude);
-  // console.log("Latitude" + props.latitude);
   const latVal = props.latitude;
   const longVal = props.longitude;
   const numberFormat = (num) => {

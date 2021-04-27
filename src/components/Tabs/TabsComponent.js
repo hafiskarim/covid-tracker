@@ -5,12 +5,13 @@ import { connect } from "react-redux";
 // import TabsGermany from "./TabsGermany";
 // import TabsIndonesia from "./TabsIndonesia";
 // import TabsEngland from "./TabsEngland";
-import { getListByCountry } from "../../actions/caseAction";
+import { getListByCountry, getCaseByCountry } from "../../actions/caseAction";
 import TabsInside from "./TabsInside";
 
 class TabsComponent extends Component {
   componentDidMount() {
     this.props.getListByCountry();
+    this.props.getCaseByCountry();
   }
 
   render() {
@@ -52,4 +53,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getListByCountry })(TabsComponent);
+export default connect(mapStateToProps, { getListByCountry, getCaseByCountry })(
+  TabsComponent
+);
