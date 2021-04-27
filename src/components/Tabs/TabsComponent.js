@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 // import TabsIndonesia from "./TabsIndonesia";
 // import TabsEngland from "./TabsEngland";
 import { getListByCountry } from "../../actions/caseAction";
+import TabsInside from "./TabsInside";
 
 class TabsComponent extends Component {
   componentDidMount() {
@@ -32,7 +33,11 @@ class TabsComponent extends Component {
           </Tab> */}
           {dataListByCountry.map((item) => (
             <Tab eventKey={item.alpha2code} title={item.name}>
-              {item.alpha2code}
+              <TabsInside
+                key={item.alpha2code}
+                latitude={item.latitude}
+                longitude={item.longitude}
+              />
             </Tab>
           ))}
         </Tabs>
